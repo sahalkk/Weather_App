@@ -23,6 +23,10 @@ body{
     max-width: 400px;
 }
 
+.card #weather{
+    display: none;
+}
+
 .search{
     display: flex;
     justify-content: center;

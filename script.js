@@ -24,4 +24,8 @@ function btnFunction(){
     let cityName = document.getElementById('search').value 
     weather.fetchWeather(cityName) 
     document.getElementById('searchCity').innerText = cityName; 
+    let myStyle = `display : block;`
+    let afterSearch = document.getElementById('weather')
+    afterSearch.style.cssText = myStyle;
 }
+
