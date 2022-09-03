@@ -3,6 +3,7 @@ let weather = {
     apiKey : "1b0ac5363763de443cc03a609ae0aa51",
     fetchWeather : function (cityName) {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=1b0ac5363763de443cc03a609ae0aa51")
+        // fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=1b0ac5363763de443cc03a609ae0aa51`)
         .then((response) => response.json())
         .then((data) => {
             console.log(data)
@@ -20,12 +21,21 @@ let weather = {
 
 
 function btnFunction(){
-    console.log('hsfd')
     let cityName = document.getElementById('search').value 
     weather.fetchWeather(cityName) 
     document.getElementById('searchCity').innerText = cityName; 
-    let myStyle = `display : block;`
-    let afterSearch = document.getElementById('weather')
-    afterSearch.style.cssText = myStyle;
+    if(cityName == ''){
+        alert("Please Enter the City name");
+        let myStyle = `display : none;`
+        let afterSearch = document.getElementById('weather')
+        afterSearch.style.cssText = myStyle ;
+        
+    }
+    
+    else{
+        let myStyle = `display : block;`
+        let afterSearch = document.getElementById('weather')
+        afterSearch.style.cssText = myStyle ;
+    }
 }
 
