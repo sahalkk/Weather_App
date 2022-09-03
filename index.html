@@ -5,22 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="./script.js"></script>
     <title>Document</title>
 </head>
 <body>
     <div class="card">
         <div class="search">
             <input type="text" class="search-bar">
-            <button>BiSearch</button>
+            <button>Search</button>
         </div>
     
         <div class="weather">
             <h1 class="city">Weather in Kaloor</h1>
-            <div class="temp">57°C</div>
+            <div class="temp"><span id="tempValue">57</span>°C</div>
             <img src="" alt="" class="logo">
             <div class="description">Partly Cloudy</div>
-            <div class="humidity">Humidity : 40%</div>
-            <div class="wind">Wind Speed : 30Kmph</div>
+            <div class="humidity"> Humidity : <span id="humidVal"> 40% </span></div>
+            <div class="wind">Wind Speed : <span id="windVal"> 30</span> Kmph </div>
         </div>
     </div> 
 </body>

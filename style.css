@@ -22,3 +22,22 @@ body{
     width: 100%;
     max-width: 400px;
 }
+
+.search{
+    display: flex;
+    justify-content: center;
+    /* margin: 2px; */
+}
+
+.search input{
+    border-radius: 10px;
+    border: 0px;
+}
+
+.search button{
+    margin: 4px;
+}
+
+.search button:hover{
+    background-color:burlywood;
+}
