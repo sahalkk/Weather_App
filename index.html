@@ -11,12 +11,12 @@
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" class="search-bar">
-            <button>Search</button>
+            <input type="text" class="search-bar" id="search">
+            <button onclick="btnFunction()">Search</button>
         </div>
     
         <div class="weather">
-            <h1 class="city">Weather in Kaloor</h1>
+            <h1 class="city">Weather in <span id="searchCity"> Kaloor </span></h1>
             <div class="temp"><span id="tempValue">57</span>°C</div>
             <img src="" alt="" class="logo">
             <div class="description">Partly Cloudy</div>
