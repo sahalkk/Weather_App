@@ -14,8 +14,10 @@ let weather = {
         })
     },
     displayWeather : function(data) {
+        document.getElementById('tempValue').innerHTML = data.main.temp
         document.getElementsByClassName('description')[0].innerHTML = data.weather[0].description;
-        document.getElementById('humidVal').innerHTML = data.main.humidity;                
+        document.getElementById('humidVal').innerHTML = data.main.humidity;
+        document.getElementById('windVal').innerHTML = data.wind.speed;
     }
 };
 
@@ -33,7 +35,8 @@ function btnFunction(){
     }
     
     else{
-        let myStyle = `display : block;`
+        let myStyle = `display : block;
+        text-transform : capitalize`
         let afterSearch = document.getElementById('weather')
         afterSearch.style.cssText = myStyle ;
     }
