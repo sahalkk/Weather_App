@@ -10,11 +10,11 @@ let weather = {
             this.displayWeather(data)
         })
         .catch((err) => {
-            console.log('tyoe error',err );
+            console.log('type error',err );
         })
     },
-    displayWeather : function(data) {
-        document.getElementById('tempValue').innerHTML = data.main.temp
+    displayWeather : function(data) { 
+        document.getElementById('tempValue').innerHTML = (data.main.temp - 273.15).toFixed(2);
         document.getElementsByClassName('description')[0].innerHTML = data.weather[0].description;
         document.getElementById('humidVal').innerHTML = data.main.humidity;
         document.getElementById('windVal').innerHTML = data.wind.speed;
